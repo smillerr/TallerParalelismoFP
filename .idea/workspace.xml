@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cc23e7e-6097-4368-9cde-d7c6824870a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scala/pruebas.sc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Benchmark/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Benchmark/package.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Matrices/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Matrices/package.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
