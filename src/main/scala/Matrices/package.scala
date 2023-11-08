@@ -6,6 +6,11 @@ package object Matrices {
   val random = new Random()
   type Matriz = Vector[Vector[Int]]
 
+
+  def vectorAlAzar(long: Int, vals:Int): Vector[Int] = {
+    val v = Vector.fill(long)(random.nextInt(vals))
+    v
+  }
   def matrizAlAzar(long: Int, vals: Int): Matriz = {
     // Crea una matriz de enteros cuadrada de long x long,
     // con valores aleatorios entre 0 y vals
@@ -34,20 +39,11 @@ package object Matrices {
   }
 
   def multMatrizPar(m1: Matriz, m2: Matriz): Matriz = {
-    val minLength = 4
-    val l1 = m1.length
-    val l2 = m2.length
-    val m2Transpuesta = transpuesta(m2)
-
-    if(m1.length <= minLength){
-      Vector.tabulate(l1, l2)((i,j) => prodPunto(m1(i),m2Transpuesta(j)))
-    } else{
-      val mitad = l1/2
-      val (mIzq, mDer) = m1 splitAt(mitad)
-      val (multIzq, multDer) = parallel(multMatrizPar(mIzq,m2) , multMatrizPar(mDer,m2))
-      multIzq ++ multDer
-    }
+    val n = m1.length
+    val mT = task(transpuesta(m2))
+    Vector.tabulate(n, n) { (i, j) => prodPunto(m1(i), mT.join()(j)) }
   }
+
 
   def subMatriz(m: Matriz, i: Int, j: Int, l: Int): Matriz = {
     Vector.tabulate(l, l) { (a, b) => m(i + a)(j + b) }.take(l)
