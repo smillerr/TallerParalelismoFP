@@ -107,7 +107,7 @@ package object Matrices {
   def multMatrizRecPar(m1: Matriz, m2: Matriz): Matriz = {
     // recibe m1 y m2 matrices cuadradas del mismo tamaño, potencia de 2
     // y devuelve la multiplicación de las 2 matrices, en paralelo
-    val umbralSeq = 4
+    val umbralSeq = 16
 
     if (m1.length <= umbralSeq) {
       multMatrizRec(m1, m2)
