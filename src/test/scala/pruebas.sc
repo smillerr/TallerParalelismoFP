@@ -1,7 +1,6 @@
 import Matrices._
 import Benchmark._
 
-
 val m1_1 = matrizAlAzar(1,2)
 val m1_2 = matrizAlAzar(1,2)
 
@@ -148,3 +147,54 @@ val matrices256x256_3 = for (
 val matrices512x512_3 = for (
   i <- (1 to 5).toVector
 ) yield compararAlgoritmos(multMatrizRec, multMatrizRecPar)(m512_1,m512_2)
+
+
+
+val prodPuntos10 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(10)
+}
+
+val prodPuntos100 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(100)
+}
+
+val prodPuntos1000 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(1000)
+}
+
+val prodPuntos10000 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(10000)
+}
+
+val prodPuntos100000 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(100000)
+}
+
+val prodPuntos1000000 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(1000000)
+}
+
+val prodPuntos10000000 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(10000000)
+}
+
+val prodPuntos100000000 = {
+  for (
+    i <- (1 to 5).toVector
+  ) yield compararProdPunto(100000000)
+}
+
